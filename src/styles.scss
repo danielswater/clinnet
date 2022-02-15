@@ -37,6 +37,9 @@ $clinnet-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body{
+  background-image: linear-gradient(360deg, #84fab0 0%, #7db9d7 100%);
+}
 hr{
   opacity: 0.10 !important;
 }

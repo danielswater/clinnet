@@ -1,8 +1,14 @@
 <mat-toolbar color="primary">
     <div class="container-nav">
         <img class="logo" src="../../../../assets/img/INERP.png" />
+        <div class="icon-button-nav">
+            <mat-icon>account_circle</mat-icon><span>Fazer login</span>
+        </div>
     </div>
 </mat-toolbar>
 <div class="container">
-    <router-outlet></router-outlet>
+    <mat-card>
+        <router-outlet></router-outlet>
+    </mat-card>
+
 </div>

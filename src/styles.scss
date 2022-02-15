@@ -37,3 +37,31 @@ $clinnet-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button{
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  text-transform: uppercase;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: #3f94b5;
+}
+
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color: #36e1d1;
+}
+.container-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.container-buttons button{
+  margin-right: 8px !important;
+}
+
+.container-buttons button:last-child{
+  margin-right: 0px !important;
+}

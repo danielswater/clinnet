@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class CadastroComponent implements OnInit {
 
   form: FormGroup = this.formBuilder.group({
-    cpf: ["", Validators.required]
+    nome: ["", Validators.required],
+    email: ["", Validators.required],
+    telefone: ["", Validators.required]
   })
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-
   }
+
   onSubmit() {
-    console.log(this.form.value)
+
   }
 
 }

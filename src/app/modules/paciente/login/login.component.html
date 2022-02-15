@@ -1,13 +1,20 @@
-<mat-card>
-    <div class="row">
-        <form class="form_cpf">
-            <div class="col-md-6">
-                <mat-form-field appearance="outline">
-                    <mat-label>Digite seu CPF</mat-label>
-                    <input matInput placeholder="Placeholder">
-                </mat-form-field>
-            </div>
-        </form>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class=" row row_cpf">
+        <div class="col-md-4">
+            <h2>Faça seu login!</h2>
+            <mat-form-field appearance="outline">
+                <mat-label>Digite seu CPF</mat-label>
+                <input formControlName="cpf" mask="000.000.000-00" required matInput placeholder="CPF">
+            </mat-form-field>
+        </div>
     </div>
+    <div class="row row_cpf">
+        <div class="col-md-6 container-buttons-center">
+            <button type="submit" [disabled]="!form.valid" mat-raised-button color="primary">
+                <mat-icon>account_circle</mat-icon> Acessar
+            </button>
+            <p style="margin-top:15px">Não tem cadastro? <a routerLink="/cadastro">Clique aqui</a></p>
 
-</mat-card>
+        </div>
+    </div>
+</form>

@@ -9,12 +9,12 @@ const routes: Routes = [
     component: PacienteComponent,
     children: [
       {
-        path: '',
-        redirectTo: 'login',
+        path: '*',
+        redirectTo: '/login/:empresa',
         pathMatch: 'full'
       },
       {
-        path: 'login',
+        path: 'login/:empresa',
         component: LoginComponent
       },
       {

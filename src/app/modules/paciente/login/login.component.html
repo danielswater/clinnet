@@ -4,7 +4,9 @@
             <h2>Faça seu login!</h2>
             <mat-form-field appearance="outline">
                 <mat-label>Digite seu CPF</mat-label>
-                <input formControlName="cpf" mask="000.000.000-00" required matInput placeholder="CPF">
+                <input formControlName="textCpf" mask="000.000.000-00" [(ngModel)]="textCpf" required matInput
+                    placeholder="CPF">
+                <input formControlName="empresa" [(ngModel)]="empresa" type="hidden">
             </mat-form-field>
         </div>
     </div>

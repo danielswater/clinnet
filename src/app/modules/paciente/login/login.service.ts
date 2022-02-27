@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  URL = 'https://www.clinnet.com.br/clinnet02/paciente/producao/logar.php';
+  URL = 'paciente/producao/logar.php';
 
   constructor(private http: HttpClient) { }
 
   postUser(body: any): Observable<any> {
-    return this.http.post<any>(this.URL, body)
+    return this.http.post<any>(environment.api + this.URL, body)
   }
 }

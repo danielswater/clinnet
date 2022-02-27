@@ -14,15 +14,19 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from './login/login.service';
+import { HomeComponent } from './home/home.component';
+import { SecurityService } from './security.service';
 
 @NgModule({
   declarations: [
     PacienteComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -37,8 +41,9 @@ import { LoginService } from './login/login.service';
     MatFormFieldModule,
     MatInputModule,
     NgxMaskModule.forRoot(),
+    ToastrModule.forRoot(),
     PacienteRoutingModule
   ],
-  providers: [LoginService]
+  providers: [LoginService, SecurityService]
 })
 export class PacienteModule { }

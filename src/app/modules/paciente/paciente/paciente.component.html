@@ -1,8 +1,12 @@
 <mat-toolbar color="primary">
     <div class="container-nav">
         <img class="logo" src="../../../../assets/img/INERP.png" />
-        <div class="icon-button-nav">
-            <mat-icon>account_circle</mat-icon><span>Fazer login</span>
+        <div style="cursor: pointer;" *ngIf="acao == 'Fazer Login'" (click)="login()" class="icon-button-nav">
+            <mat-icon>account_circle</mat-icon><span>{{acao}}</span>
+        </div>
+
+        <div style="cursor: pointer;" *ngIf="acao == 'Sair'" (click)="logout()" class="icon-button-nav">
+            <mat-icon>account_circle</mat-icon><span>{{acao}}</span>
         </div>
     </div>
 </mat-toolbar>
